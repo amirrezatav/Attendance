@@ -1,0 +1,99 @@
+﻿<UserControl x:Class="Attendance.Help"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Attendance"
+             mc:Ignorable="d" Margin="0" 
+             Background="{StaticResource Light}">
+
+
+    <StackPanel  HorizontalAlignment="Center">
+        <GroupBox  Header="راهنما استفاده از نرم افزار" Margin="10"  FontFamily="/Attendance;component/Fonts/#B Titr" DockPanel.Dock="Top" FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"  FlowDirection="RightToLeft"  VerticalAlignment="Top"  >
+            <StackPanel Orientation="Vertical" Margin="10 10 10 -20">
+               
+                <TextBox HorizontalAlignment="Left" FontSize="16" xml:space="preserve" Style="{StaticResource ConvertTextBlock}"  AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible" FontFamily="/Attendance;component/Fonts/#IRANSans" TextWrapping="Wrap" > شما در این بخش موارد زیر را یاد میگیرید :
+                    1-وارد کردن اطلاعات کلاس و دانش آموزان
+                    2- بررسی وضعیت حضور دانش آموز
+                    3- حذف کلاس
+                    </TextBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox  Header="ثبت اطلاعات قدم اول" Margin="10"  FontFamily="/Attendance;component/Fonts/#B Titr" DockPanel.Dock="Top" FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"  FlowDirection="RightToLeft"  VerticalAlignment="Top"  >
+            <StackPanel Orientation="Vertical" Margin="10 10 10 -20">
+                <Border BorderBrush="Black" BorderThickness="2" Padding="2">
+                    <Image FlowDirection="LeftToRight" x:Name="image1" HorizontalAlignment="Center"  MinWidth="200" MinHeight="200"  Source="Help Images/1.jpg" />
+                </Border>
+                <TextBox HorizontalAlignment="Left" FontSize="16" xml:space="preserve" Style="{StaticResource ConvertTextBlock}"  AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible" FontFamily="/Attendance;component/Fonts/#IRANSans" TextWrapping="Wrap" > در قدم اول لازم است اطلاعات کلاس  را وارد کنید برای این کار از بخش "افزودن کلاس" نمونه قالب اکسل را دریافت و ذخیره کنید
+برای دریافت قالب بعد از اینکه وارد "افزودن کلاس" شدید گزینه "دریافت نمونه قالب اکسل" را انتخاب کنید و محل ذخیره را تعیین کرده و قالب را دریافت کنید 
+شما باید اطلاعات دانش آموزان را وارد این قالب کنید 
+                    </TextBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox  Header="ثبت اطلاعات قدم دوم" Margin="10"  FontFamily="/Attendance;component/Fonts/#B Titr" DockPanel.Dock="Top" FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"  FlowDirection="RightToLeft"  VerticalAlignment="Top"  >
+            <StackPanel Orientation="Vertical" Margin="10 10 10 -20">
+                <Border BorderBrush="Black" BorderThickness="2" Padding="2">
+                    <Image FlowDirection="LeftToRight" x:Name="image2" HorizontalAlignment="Center"  MinWidth="200" MinHeight="200"  Source="Help Images/2.jpg" />
+                </Border>
+                <TextBox HorizontalAlignment="Left" FontSize="16" xml:space="preserve" Style="{StaticResource ConvertTextBlock}"  AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible" FontFamily="/Attendance;component/Fonts/#IRANSans" TextWrapping="Wrap" >در قدم اول نرم افزار برای شما یک فایل اکسل با نامی که انتخاب کردید در مسیر که شما مشخص کردید می سازد آن را باز کنید و اطلاعات دانش آموزان را وارد کنید
+توجه کنید که لزومی ندارد همه اطلاعات وارد شود ، در صورتی که ستونی از مشخصات را نیاز نداشتید کافی است آن را خالی بگذارید
+ وقتی فایل اکسل را باز کنید از بخش Page Layout می توانید Direction آن را به Righ-To-Shift تغییر دهید تا راست چین شود و وارد کردن داده ها ساده گردد
+حال داده هایی که میخواهید را وارد کنید سپس ذخیره کنید و فایل را ببندید
+                    </TextBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox  Header="ثبت اطلاعات قدم سوم" Margin="10"  FontFamily="/Attendance;component/Fonts/#B Titr" DockPanel.Dock="Top" FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"  FlowDirection="RightToLeft"  VerticalAlignment="Top"  >
+            <StackPanel Orientation="Vertical" Margin="10 10 10 -20">
+                <Border BorderBrush="Black" BorderThickness="2" Padding="2">
+                    <Image FlowDirection="LeftToRight" x:Name="image3" HorizontalAlignment="Center" MinWidth="200" MinHeight="200"  Source="Help Images/3.jpg" />
+                </Border>
+                <TextBox HorizontalAlignment="Left" FontSize="16" xml:space="preserve" Style="{StaticResource ConvertTextBlock}"  AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible" FontFamily="/Attendance;component/Fonts/#IRANSans" TextWrapping="Wrap" >برای بارگذاری اطلاعات دانش آموزان وارد "افزودن کلاس" شوید سپس نام کلاس را وارد کنید و از بخش "وارد کردن اطلاعات کلاس" فایل اکسلی که آمده کرده اید و حاوی اطلاعات دانش آموزان می باشد را انتخاب کنید سپس "ذخیره" کنید
+                    </TextBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox  Header="نحوه بررسی وضعیت حضور دانش آموزان قدم اول" Margin="10"  FontFamily="/Attendance;component/Fonts/#B Titr" DockPanel.Dock="Top" FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"  FlowDirection="RightToLeft"  VerticalAlignment="Top"  >
+            <StackPanel Orientation="Vertical" Margin="10 10 10 -20">
+                <Border BorderBrush="Black" BorderThickness="2" Padding="2">
+                    <Image FlowDirection="LeftToRight" x:Name="image4" HorizontalAlignment="Center" MinWidth="200" MinHeight="200"  Source="Help Images/4.jpg" />
+                </Border>
+                <TextBox HorizontalAlignment="Left" FontSize="16" xml:space="preserve" Style="{StaticResource ConvertTextBlock}"  AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible" FontFamily="/Attendance;component/Fonts/#IRANSans" TextWrapping="Wrap" >مراحل قبلی یکبار انجام شوند کافی است ، حال وارد  "منو اصلی" شوید سپس وارد کلاس اسکای روم مربوطه شوید و لیست دانش آموزان اسکای روم را کپی و در محل مشخص شده پیست کنید و بعد کلاس مربوطه را انتخاب کنید سپس دکمه بررسی را بفشارید
+                    </TextBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox  Header="نحوه بررسی وضعیت حضور دانش آموزان قدم دوم" Margin="10"  FontFamily="/Attendance;component/Fonts/#B Titr" DockPanel.Dock="Top" FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"  FlowDirection="RightToLeft"  VerticalAlignment="Top"  >
+            <StackPanel Orientation="Vertical" Margin="10 10 10 -20">
+                <Border BorderBrush="Black" BorderThickness="2" Padding="2">
+                    <Image FlowDirection="LeftToRight" x:Name="image5" HorizontalAlignment="Center"  MinWidth="200" MinHeight="200"  Source="Help Images/5.jpg" />
+                </Border>
+                <TextBox HorizontalAlignment="Left" FontSize="16" xml:space="preserve" Style="{StaticResource ConvertTextBlock}"  AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible" FontFamily="/Attendance;component/Fonts/#IRANSans" TextWrapping="Wrap" >دانش آموزان غایب بعد از فشردن بررسی به شما نشان داده می شوند
+توجه کنید که شما میتوانید بررسی را به ازای کلاس های مختف هم انجام دهید ، مثلاً فرض کنید 10 کلاس دارید ، و 100 نام بعد از این که 100 نام را وارد بخش مربوطه کردید بررسی را یک بار برای کلاس 1 بعد برای کلاس 2 و... انجام دهید و نیازی نیست هر بار آن 100 نام را وارد کنید.
+                </TextBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox  Header="نحوه بررسی وضعیت حضور دانش آموزان قدم سوم" Margin="10"  FontFamily="/Attendance;component/Fonts/#B Titr" DockPanel.Dock="Top" FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"  FlowDirection="RightToLeft"  VerticalAlignment="Top"  >
+            <StackPanel Orientation="Vertical" Margin="10 10 10 -20">
+                <Border BorderBrush="Black" BorderThickness="2" Padding="2">
+                    <Image FlowDirection="LeftToRight" x:Name="image7" HorizontalAlignment="Center"  MinWidth="200" MinHeight="200"  Source="Help Images/7.jpg" />
+                </Border>
+                <TextBox HorizontalAlignment="Left" FontSize="16" xml:space="preserve" Style="{StaticResource ConvertTextBlock}"  AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible" FontFamily="/Attendance;component/Fonts/#IRANSans" TextWrapping="Wrap" >بعد از بررسی دلیل غیبت دانش آموز ، شما با دوبار کلیک کردن رویه اطلاعات یک دانش آموز می توانید آن را از لیست  افراد غایب حذف کنید
+                  </TextBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox  Header="حذف کلاس" Margin="10"  FontFamily="/Attendance;component/Fonts/#B Titr" DockPanel.Dock="Top" FontSize="30" FontWeight="Bold" HorizontalAlignment="Stretch"  FlowDirection="RightToLeft"  VerticalAlignment="Top"  >
+            <StackPanel Orientation="Vertical" Margin="10 10 10 10">
+                <Border BorderBrush="Black" BorderThickness="2" Padding="2">
+                    <Image FlowDirection="LeftToRight" x:Name="image6" HorizontalAlignment="Center"  MinWidth="200" MinHeight="200"  Source="Help Images/6.jpg" />
+                </Border>
+                <TextBox HorizontalAlignment="Left" FontSize="16" xml:space="preserve" Style="{StaticResource ConvertTextBlock}"  AcceptsReturn="True"
+                    VerticalScrollBarVisibility="Visible" FontFamily="/Attendance;component/Fonts/#IRANSans" TextWrapping="Wrap" >  وارد "حذف کلاس" شوید ، کلاس را انتخاب کنید و دکمه حذف را کلیک کنید.   </TextBox>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</UserControl>
