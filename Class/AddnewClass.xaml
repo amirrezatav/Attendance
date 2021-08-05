@@ -8,34 +8,10 @@
              Margin="10" Background="{StaticResource Light}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="0"/>
             <RowDefinition/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="130"/>
         </Grid.RowDefinitions>
-        <Grid HorizontalAlignment="Center">
-            <StackPanel Grid.Column="1">
-                <StackPanel Orientation="Horizontal">
-                    <TextBox Width="212" Height="36" TextAlignment="Right" x:Name="classname" Tag="نام کلاس را وارد کنید" FontFamily="/Attendance;component/Fonts/#IRANSans" Style="{StaticResource MyWaterMarkStyle}"  ClipToBounds="True"  SnapsToDevicePixels="True" Margin="33.75,0" FontSize="22" MaxLines="1" MaxLength="20" TabIndex="0" >
-                        <TextBox.ToolTip>
-                            <ToolTip Background="{x:Null}" BorderBrush="{x:Null}" >
-                                <Border BorderBrush="{x:Null}" Background="#dbe9ee" Padding="3" CornerRadius="10 10 10 10">
-                                    <StackPanel>
-                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 5 0">
-                                        </StackPanel>
-                                        <Label  Content=" نام کلاس را به یک زبان وارد کنید" FontFamily="Fonts/B Nazanin.TTF #B Nazanin" FontSize="15" HorizontalAlignment="Right" 
-                       Margin="0 0 5 0" TabIndex="3"  Foreground="#FF5F5F5F"/>
-                                        <Label  Content="فارسی یا انگلیسی" FontFamily="Fonts/B Nazanin.TTF #B Nazanin" FontSize="15" HorizontalAlignment="Right"  Foreground="#FF5F5F5F"
-                       Margin="0 0 5 0" TabIndex="3"/>
-                                    </StackPanel>
-                                </Border>
-                            </ToolTip>
-                        </TextBox.ToolTip>
-                    </TextBox>
-                    <TextBlock Margin="0 5 5 5" Style="{StaticResource InfoData}" FontSize="20" Text="نام کلاس"/>
-                </StackPanel>
-
-            </StackPanel>
-        </Grid>
         <WrapPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center">
             <Border Margin="20" x:Name="GetExcel" Background="{StaticResource ExtraHeavy}" Cursor="Hand" Height="150" CornerRadius="30" Width="150" MouseLeftButtonUp="Border_MouseLeftButtonUp_1">
                 <Grid>
@@ -95,7 +71,33 @@
 
 
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel>
+                <Grid HorizontalAlignment="Center">
+                    <StackPanel Grid.Column="1">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Width="212" Height="36" TextAlignment="Right" x:Name="classname" Tag="نام کلاس را وارد کنید" FontFamily="/Attendance;component/Fonts/#IRANSans" Style="{StaticResource MyWaterMarkStyle}"  ClipToBounds="True"  SnapsToDevicePixels="True" Margin="33.75,0" FontSize="22" MaxLines="1" MaxLength="20" TabIndex="0" >
+                                <TextBox.ToolTip>
+                                    <ToolTip Background="{x:Null}" BorderBrush="{x:Null}" >
+                                        <Border BorderBrush="{x:Null}" Background="#dbe9ee" Padding="3" CornerRadius="10 10 10 10">
+                                            <StackPanel>
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 5 0">
+                                                </StackPanel>
+                                                <Label  Content=" نام کلاس را به یک زبان وارد کنید" FontFamily="Fonts/B Nazanin.TTF #B Nazanin" FontSize="15" HorizontalAlignment="Right" 
+                       Margin="0 0 5 0" TabIndex="3"  Foreground="#FF5F5F5F"/>
+                                                <Label  Content="فارسی یا انگلیسی" FontFamily="Fonts/B Nazanin.TTF #B Nazanin" FontSize="15" HorizontalAlignment="Right"  Foreground="#FF5F5F5F"
+                       Margin="0 0 5 0" TabIndex="3"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </ToolTip>
+                                </TextBox.ToolTip>
+                            </TextBox>
+                            <TextBlock Margin="0 5 5 5" Style="{StaticResource InfoData}" FontSize="20" Text="نام کلاس"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Grid>
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Center">
+                
                 <Button Cursor="Hand" x:Name="Save"  Content="ذخیره" Width="70" Height="30"  Style="{StaticResource ButtonStyle}" Click="Save_Click">
                     <Button.ToolTip>
                         <ToolTip Background="{x:Null}" BorderBrush="{x:Null}" >
@@ -113,6 +115,8 @@
 
                 </Button>
             </StackPanel>
+            </StackPanel>
+           
         </StackPanel>
     </Grid>
 </UserControl>
