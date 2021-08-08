@@ -42,6 +42,7 @@ namespace Attendance
         {
             try
             {
+                AllClass.Clear();
                 var res = db.LoadClass();
                 if (Setting.ISListShow == true)
                 {
@@ -82,7 +83,6 @@ namespace Attendance
         private void SearchCheckBox()
         {
             bool SelectedClass = false;
-           
             
             foreach (var item in AllClass)
             {
@@ -99,20 +99,20 @@ namespace Attendance
                                 allstudent.RemoveAt(i);
                         }
                     }
-                    if (allstudent.Count == 0)
-                    {
-                        MessageBox.Show("هیچ دانش آموزی غایب نیست", "بدون غایب", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                    else
+                    if(!(allstudent.Count == 0))
                         foreach (var target in allstudent)
                         {
                             Absents.Items.Add(target);
                         }
                 }
             }
-            
             if (!SelectedClass)
+            {
                 MessageBox.Show("یک کلاس را انتخاب کنید");
+                return;
+            }
+            if (Absents.Items.Count == 0)
+                MessageBox.Show("هیچ دانش آموزی غایب نیست", "بدون غایب", MessageBoxButton.OK, MessageBoxImage.Information);
         }
         void SearchList()
         {
@@ -136,7 +136,7 @@ namespace Attendance
                         allstudent.RemoveAt(i);
                 }
             }
-            if (allstudent.Count == 0)
+            if (allstudent.Count == 0 && Absents.Items.Count == 0)
             {
                 MessageBox.Show("هیچ دانش آموزی غایب نیست", "بدون غایب", MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -162,7 +162,6 @@ namespace Attendance
             CheckBTN.Cursor = Cursors.Hand;
             CheckBTN.IsEnabled = true;
         }
-
         private void Absents_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ListView list = (ListView)sender;
